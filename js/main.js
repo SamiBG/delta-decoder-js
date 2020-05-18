@@ -24,6 +24,8 @@ function conversor(conv_val) {
             addr_b3 = "0000";
         } else if (conv_val > 0 && conv_val < 80) {
             addr_b3 = b10_to_b3(conv_val);
+        } else {
+            throw ("ERROR: Address out of bounds");
         }
 
         console.log(addr_b3);
