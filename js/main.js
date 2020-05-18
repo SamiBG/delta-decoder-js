@@ -5,11 +5,11 @@ function conversor(conv_val) {
     let addr_d8 = "N/A";
     let i = 0;
 
-    if (size === 4) {
+    if (size === 4 && check_numbers(conv_val)) {
         addr_d4 = conv_val;
         addr_b10 = d4_to_b10(addr_d4);
         addr_d8 = d4_to_d8(addr_d4);
-    } else if (size === 8) {
+    } else if (size === 8 && check_numbers(conv_val)) {
         addr_d8 = conv_val;
         addr_b10 = d8_to_b10(addr_d8);
         addr_d4 = d8_to_d4(addr_d8);
@@ -27,8 +27,6 @@ function conversor(conv_val) {
         } else {
             throw ("ERROR: Address out of bounds");
         }
-
-        console.log(addr_b3);
 
         //b3 a D4
         if (!addr_b3.includes("1") && addr_b3.length === 4) {
@@ -49,6 +47,8 @@ function conversor(conv_val) {
                 }
             }
         }
+    } else {
+        throw ("ERROR: Invalid address");
     }
     return {b10 : addr_b10, d4 : addr_d4, d8 : addr_d8};
 }
@@ -135,4 +135,15 @@ function d8_to_b10(val_d8) {
         }
     }
     return val_b10;
+}
+
+function check_numbers(input_val){
+    let i = 0;
+    while (i < input_val.length) {
+        if (input_val[i] !== "1" && input_val[i] !== "0") {
+            return false;
+        }
+        i = i+1;
+    }
+    return true;
 }
