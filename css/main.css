@@ -1,0 +1,99 @@
+body {
+    font-family: Helvetica;
+    background-color: #f3f3f3;
+}
+
+#div_header {
+    background-color: #080808;
+    overflow: hidden;
+    color: #E2001A;
+    text-align: center;
+    font-variant: small-caps;
+}
+
+.button {
+    background-color: #E2001A;
+    padding: 0.5em 1.5em;
+    border-radius: 20px;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.input {
+    width: 20%;
+    margin: 1em 0;
+    padding: 0.5em 1em;
+    border-radius: 25px;
+    border: none;
+    font-size: 1.2rem;
+}
+
+.error {
+    width: 100%;
+    border: none;
+    font-size: 1.2rem;
+    padding: 0.5em 0;
+    margin: 0.5em 0;
+    text-align: center;
+    background-color: #bb0000;
+    color: #FFFFFF;
+}
+
+.address {
+    display: inline-block;
+    margin: 1em 0;
+    width: 33.1%;
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: #C2001A;
+    color: #FFFFFF;
+}
+
+.address label{
+    width: 100%;
+    font-variant: small-caps;
+    font-weight: bolder;
+    display:block;
+    padding: 0.75em 0;
+}
+
+.address input {
+    width: 100%;
+    border: none;
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: #FFFFFF;
+    display:block;
+    padding: 0.75em 0;
+}
+
+@media screen and (max-width: 600px) {
+    .address {
+        display: inline-block;
+        margin: 1em 0;
+        width: 100%;
+        text-align: center;
+        font-size: 1.2rem;
+        background-color: #C2001A;
+        color: #FFFFFF;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1300px) {
+    .address {
+        display: inline-block;
+        margin: 1em 0;
+        width: 70%;
+        text-align: center;
+        font-size: 1.2rem;
+        background-color: #C2001A;
+        color: #FFFFFF;
+    }
+
+
+    #div_content {
+        text-align: center;
+    }
+}
